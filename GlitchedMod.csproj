@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46C0AA19-5CF1-4622-86D7-7035F5AD18B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GlitchedMod</RootNamespace>
+    <AssemblyName>GlitchedMod</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="1BigDLL4221">
+      <HintPath>..\..\NewDLL\bin\Debug\1BigDLL4221.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\CommonDLL\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\CommonDLL\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlitchedDuo\Buffs\BattleUnitBuf_GlitchedFinnEgo_21341.cs" />
+    <Compile Include="GlitchedDuo\Buffs\BattleUnitBuf_GlitchedJakeEgo_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_AssistBrotherlyBond_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_BladeSlash_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_ElasticDestruction_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_FightMe_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_FinnMassAttack_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_GlitchedEgo_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_GlitchedSwordSlash_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_GlitchyBladeArm_21341.cs" />
+    <Compile Include="GlitchedDuo\Cards\DiceCardSelfAbility_ListenUp_21341.cs" />
+    <Compile Include="GlitchedDuo\EnemyTeamStageManager_GlitchedDuo_21341.cs" />
+    <Compile Include="GlitchedDuo\GlitchedDuo_21341MapManager.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_BestDuo_21341.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_CorruptedFriendship_21341.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_GlitchedFinnNpc_21341.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_GlitchedFinn_21341.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_GlitchedJakeNpc_21341.cs" />
+    <Compile Include="GlitchedDuo\Passives\PassiveAbility_GlitchedJake_21341.cs" />
+    <Compile Include="GlitchedDuo\Util\Extension\NpcMechUtil_Finn.cs" />
+    <Compile Include="GlitchedModInit.cs" />
+    <Compile Include="GlitchedModParameters.cs" />
+    <Compile Include="GlitchedPeter\Buffs\BattleUnitBuf_FamilyGuyEgo_21341.cs" />
+    <Compile Include="GlitchedPeter\Buffs\BattleUnitBuf_ShimmeringPeter_21341.cs" />
+    <Compile Include="GlitchedPeter\Cards\DiceCardSelfAbility_FamilyGuyEgo_21341.cs" />
+    <Compile Include="GlitchedPeter\EnemyTeamStageManager_Peter_21341.cs" />
+    <Compile Include="GlitchedPeter\GlitchedPeter_21341MapManager.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_Chris_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_GlitchedField_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_Lois_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_Meg_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_PeterEgo_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_PeterNpc_21341.cs" />
+    <Compile Include="GlitchedPeter\Peter\Passives\PassiveAbility_PeterPlayer_21341.cs" />
+    <Compile Include="GlitchedPeter\Util21341\Extensions\MechUtil_Peter.cs" />
+    <Compile Include="GlitchedPeter\Util21341\Extensions\NpcMechUtil_Peter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
