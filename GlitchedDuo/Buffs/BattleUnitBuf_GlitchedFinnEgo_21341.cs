@@ -8,6 +8,7 @@ namespace GlitchedMod.GlitchedDuo.Buffs
         public BattleUnitBuf_GlitchedFinnEgo_21341() : base(infinite: true, lastOneScene: false)
         {
         }
+
         public override bool isAssimilation => true;
         protected override string keywordId => "FinnEgo_21341";
         protected override string keywordIconId => "FinnEgo_21341";

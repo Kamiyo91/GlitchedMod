@@ -62,17 +62,17 @@ namespace GlitchedMod
                 new CardOptions(5, CardOption.OnlyPage, new List<string> { "GlitchedFinnPage_21341" },
                     new List<LorId> { new LorId(GlitchedModParameters.PackageId, 10000001) },
                     cardColorOptions: new CardColorOptions(new Color(0.86f, 0.86f, 86f),
-                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor:HSVColors.White)),
+                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor: HSVColors.White)),
                 new CardOptions(12, CardOption.OnlyPage, new List<string> { "GlitchedJakePage_21341" },
                     new List<LorId> { new LorId(GlitchedModParameters.PackageId, 10000002) },
                     cardColorOptions: new CardColorOptions(new Color(0.86f, 0.86f, 86f),
-                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor:HSVColors.White)),
+                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor: HSVColors.White)),
                 new CardOptions(4, CardOption.Personal,
                     cardColorOptions: new CardColorOptions(new Color(0.86f, 0.86f, 86f),
-                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor:HSVColors.White)),
+                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor: HSVColors.White)),
                 new CardOptions(15, CardOption.Personal,
                     cardColorOptions: new CardColorOptions(new Color(0.86f, 0.86f, 86f),
-                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor:HSVColors.White))
+                        customIconColor: new Color(0.86f, 0.86f, 86f), iconColor: HSVColors.White))
             });
         }
 

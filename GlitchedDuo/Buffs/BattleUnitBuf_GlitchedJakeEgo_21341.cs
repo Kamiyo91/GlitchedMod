@@ -7,6 +7,7 @@ namespace GlitchedMod.GlitchedDuo.Buffs
         public BattleUnitBuf_GlitchedJakeEgo_21341() : base(infinite: true, lastOneScene: false)
         {
         }
+
         public override bool isAssimilation => true;
         protected override string keywordId => "JakeEgo_21341";
         protected override string keywordIconId => "JakeEgo_21341";

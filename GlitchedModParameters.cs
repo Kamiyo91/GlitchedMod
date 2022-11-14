@@ -61,7 +61,8 @@ namespace GlitchedMod
                 }
             }));
 
-        public MechUtilBase FinnPlayerUtil = new MechUtilBase(new MechUtilBaseModel(personalCards: new Dictionary<LorId, PersonalCardOptions>
+        public MechUtilBase FinnPlayerUtil = new MechUtilBase(new MechUtilBaseModel(
+            personalCards: new Dictionary<LorId, PersonalCardOptions>
             {
                 { new LorId(GlitchedModParameters.PackageId, 4), new PersonalCardOptions(true, activeEgoCard: true) },
                 { new LorId(GlitchedModParameters.PackageId, 13), new PersonalCardOptions(true) }
@@ -130,7 +131,8 @@ namespace GlitchedMod
                 }
             }));
 
-        public MechUtilBase JakePlayerUtil = new MechUtilBase(new MechUtilBaseModel(firstEgoFormCard: new LorId(GlitchedModParameters.PackageId, 4),
+        public MechUtilBase JakePlayerUtil = new MechUtilBase(new MechUtilBaseModel(
+            firstEgoFormCard: new LorId(GlitchedModParameters.PackageId, 4),
             personalCards: new Dictionary<LorId, PersonalCardOptions>
             {
                 { new LorId(GlitchedModParameters.PackageId, 4), new PersonalCardOptions(true, activeEgoCard: true) }
