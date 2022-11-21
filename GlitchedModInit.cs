@@ -125,7 +125,7 @@ namespace GlitchedMod
                     customIconSpriteId: GlitchedModParameters.PackageId, credenzaBooksId: new List<int>
                     {
                         10000001, 10000002, 10000003
-                    }));
+                    },bookDataColor:new CredenzaColorOptions(new Color(0.86f, 0.86f, 86f), new Color(0.86f, 0.86f, 86f))));
         }
 
         private static void OnInitSprites()
