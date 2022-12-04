@@ -34,6 +34,7 @@ namespace GlitchedMod
                 Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             ModParameters.Path.Add(GlitchedModParameters.PackageId, GlitchedModParameters.Path);
             ModParameters.DefaultKeyword.Add(GlitchedModParameters.PackageId, "GlitchedModPage_Re21341");
+            ModParameters.Assemblies.Add(Assembly.GetExecutingAssembly());
             OnInitSprites();
             OnInitSkins();
             OnInitKeypages();
