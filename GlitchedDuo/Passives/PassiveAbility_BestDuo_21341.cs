@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using BigDLL4221.Utils;
 
 namespace GlitchedMod.GlitchedDuo.Passives
 {
@@ -16,7 +15,10 @@ namespace GlitchedMod.GlitchedDuo.Passives
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, 2);
                 _buffActive = true;
             }
-            else _buffActive = false;
+            else
+            {
+                _buffActive = false;
+            }
         }
 
         public override void OnRoundEnd()
@@ -28,7 +30,10 @@ namespace GlitchedMod.GlitchedDuo.Passives
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, 2);
                 _buffActive = true;
             }
-            else _buffActive = false;
+            else
+            {
+                _buffActive = false;
+            }
         }
 
         public bool GetBuffStatus()

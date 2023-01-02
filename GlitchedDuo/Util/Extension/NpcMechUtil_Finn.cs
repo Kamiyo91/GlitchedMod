@@ -6,7 +6,7 @@ namespace GlitchedMod.GlitchedDuo.Util.Extension
 {
     public class NpcMechUtil_Finn : NpcMechUtilBase
     {
-        public NpcMechUtil_Finn(NpcMechUtilBaseModel model) : base(model)
+        public NpcMechUtil_Finn(NpcMechUtilBaseModel model) : base(model, GlitchedModParameters.PackageId)
         {
         }
 

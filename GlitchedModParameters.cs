@@ -95,7 +95,7 @@ namespace GlitchedMod
                         .FirstOrDefault(x => x.Key.Equals("FinnEgoActive1_21341"))
                         .Value.Desc
                 }
-            }));
+            }), GlitchedModParameters.PackageId);
     }
 
     public class GlitchedJakeUtil
@@ -129,7 +129,7 @@ namespace GlitchedMod
                         .FirstOrDefault(x => x.Key.Equals("JakeSurvive1_21341"))
                         .Value.Desc
                 }
-            }));
+            }), GlitchedModParameters.PackageId);
 
         public MechUtilBase JakePlayerUtil = new MechUtilBase(new MechUtilBaseModel(
             firstEgoFormCard: new LorId(GlitchedModParameters.PackageId, 4),
@@ -160,7 +160,7 @@ namespace GlitchedMod
                             }
                         })
                 }
-            }));
+            }), GlitchedModParameters.PackageId);
     }
 
     public class GlitchedPeterUtil

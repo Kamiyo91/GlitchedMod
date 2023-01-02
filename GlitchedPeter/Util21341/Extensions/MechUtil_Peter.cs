@@ -9,7 +9,7 @@ namespace GlitchedMod.GlitchedPeter.Util21341.Extensions
 {
     public class MechUtil_Peter : MechUtilBase
     {
-        public MechUtil_Peter(MechUtilBaseModel model) : base(model)
+        public MechUtil_Peter(MechUtilBaseModel model) : base(model, GlitchedModParameters.PackageId)
         {
         }
 
