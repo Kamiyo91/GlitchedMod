@@ -1,21 +1,21 @@
-﻿using CustomMapUtility;
+﻿using System.Collections.Generic;
+using BigDLL4221.Models;
+using BigDLL4221.StageManagers;
+using CustomMapUtility;
 
 namespace GlitchedMod.GlitchedDuo
 {
-    public class EnemyTeamStageManager_GlitchedDuo_21341 : EnemyTeamStageManager
+    public class EnemyTeamStageManager_GlitchedDuo_21341 : EnemyTeamStageManager_BaseWithCMU_DLL4221
     {
-        private readonly CustomMapHandler _cmh = CustomMapHandler.GetCMU(GlitchedModParameters.PackageId);
-
         public override void OnWaveStart()
         {
-            _cmh.InitCustomMap<GlitchedDuo_21341MapManager>("GlitchedDuo_21341", false, true, 0.5f, 0.55f);
-            _cmh.EnforceMap();
-            Singleton<StageController>.Instance.CheckMapChange();
+            SetParameters(CustomMapHandler.GetCMU(GlitchedModParameters.PackageId), new GlitchedFinnUtil().FinnNpcUtil,
+                new List<MapModel> { GlitchedModParameters.GlitchedDuoMapModel });
+            base.OnWaveStart();
         }
 
-        public override void OnRoundStart()
+        public override void OnRoundStart_After()
         {
-            _cmh.EnforceMap();
         }
     }
 }

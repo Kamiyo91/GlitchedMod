@@ -1,22 +1,18 @@
-﻿using CustomMapUtility;
+﻿using System.Collections.Generic;
+using BigDLL4221.Models;
+using BigDLL4221.StageManagers;
+using CustomMapUtility;
 
 namespace GlitchedMod.GlitchedPeter
 {
-    public class EnemyTeamStageManager_Peter_21341 : EnemyTeamStageManager
+    public class EnemyTeamStageManager_Peter_21341 : EnemyTeamStageManager_BaseWithCMU_DLL4221
     {
-        private readonly CustomMapHandler _cmh = CustomMapHandler.GetCMU(GlitchedModParameters.PackageId);
-
         public override void OnWaveStart()
         {
-            _cmh.InitCustomMap<GlitchedPeter_21341MapManager>("GlitchedPeter_21341", false, true, 0.5f,
-                0.55f);
-            _cmh.EnforceMap();
-            Singleton<StageController>.Instance.CheckMapChange();
-        }
-
-        public override void OnRoundStart()
-        {
-            _cmh.EnforceMap();
+            SetParameters(CustomMapHandler.GetCMU(GlitchedModParameters.PackageId),
+                new GlitchedPeterUtil().PeterNpcUtil,
+                new List<MapModel> { GlitchedModParameters.GlitchedPeterMapModel });
+            base.OnWaveStart();
         }
     }
 }

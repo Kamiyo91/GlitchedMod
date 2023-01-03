@@ -5,6 +5,7 @@ using BigDLL4221.Models;
 using GlitchedMod.GlitchedDuo;
 using GlitchedMod.GlitchedDuo.Buffs;
 using GlitchedMod.GlitchedDuo.Util.Extension;
+using GlitchedMod.GlitchedPeter;
 using GlitchedMod.GlitchedPeter.Buffs;
 using GlitchedMod.GlitchedPeter.Util21341.Extensions;
 using LOR_XML;
@@ -18,6 +19,9 @@ namespace GlitchedMod
 
         public static MapModel GlitchedDuoMapModel = new MapModel(typeof(GlitchedDuo_21341MapManager),
             "GlitchedDuo_21341", bgy: 0.55f, originalMapStageIds: new List<LorId> { new LorId(PackageId, 1) });
+
+        public static MapModel GlitchedPeterMapModel = new MapModel(typeof(GlitchedPeter_21341MapManager),
+            "GlitchedPeter_21341", bgy: 0.55f, originalMapStageIds: new List<LorId> { new LorId(PackageId, 2) });
     }
 
     public class GlitchedFinnUtil
@@ -25,10 +29,11 @@ namespace GlitchedMod
         public NpcMechUtil_Finn FinnNpcUtil = new NpcMechUtil_Finn(new NpcMechUtilBaseModel("FinnPhaseData21341",
             mechOptions: new Dictionary<int, MechPhaseOptions>
             {
-                { 0, new MechPhaseOptions(mechHp: 171, speedDieAdder: 1) },
+                { 0, new MechPhaseOptions(mechHp: 171, speedDieAdder: 1, hasCustomMap: true) },
                 {
                     1,
-                    new MechPhaseOptions(startMassAttack: true, speedDieAdder: 2, setCounterToMax: true, forceEgo: true,
+                    new MechPhaseOptions(startMassAttack: true, hasCustomMap: true, speedDieAdder: 2,
+                        setCounterToMax: true, forceEgo: true,
                         egoMassAttackCardsOptions: new List<SpecialAttackCardOptions>
                             { new SpecialAttackCardOptions(new LorId(GlitchedModParameters.PackageId, 14)) })
                 }
@@ -168,10 +173,10 @@ namespace GlitchedMod
         public NpcMechUtil_Peter PeterNpcUtil = new NpcMechUtil_Peter(new NpcMechUtilBaseModel("PeterPhase21341",
             originalSkinName: "PeterPhase1_21341", mechOptions: new Dictionary<int, MechPhaseOptions>
             {
-                { 0, new MechPhaseOptions(mechHp: 502, speedDieAdder: 2) },
+                { 0, new MechPhaseOptions(mechHp: 502, speedDieAdder: 2, hasCustomMap: true) },
                 {
                     1,
-                    new MechPhaseOptions(forceEgo: true, speedDieAdder: 4,
+                    new MechPhaseOptions(forceEgo: true, speedDieAdder: 4, hasCustomMap: true,
                         additionalPassiveByIds: new List<LorId>
                         {
                             new LorId(GlitchedModParameters.PackageId, 8),
